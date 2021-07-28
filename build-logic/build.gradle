@@ -16,8 +16,7 @@ dependencies {
     constraints {
         implementation('com.github.spotbugs:com.github.spotbugs.gradle.plugin') {
             version {
-                prefer '4.5.0'
-                reject '4.6.2'
+                reject '[4.6.0, 4.7.0)'
             }
             because 'our plugins do not work with 4.6.x'
         }
