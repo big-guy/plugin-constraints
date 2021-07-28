@@ -2,9 +2,9 @@
 
 This template is based on `gradle init`, but adds contraints against other plugins that may be applied.
 
-The plugin build is defined in `build-logic`. In `build-logic/build.gradle`, we define an implementation constraint on the Spotbugs plugin. We reject any 4.6.x version of the plugin. 
+The plugin build is defined in `build-logic`. In [`build-logic/build.gradle`](build-logic/build.gradle), we define an implementation constraint on the Spotbugs plugin. We reject any 4.6.x version of the plugin. 
 
-In `app/build.gradle`, we try to apply the Spotbugs plugin version 4.6.2. You can see the classpath for the `app` project by running `app:buildEnvironment`. 
+In [`app/build.gradle`](app/build.gradle), we try to apply the Spotbugs plugin version 4.6.2. You can see the classpath for the `app` project by running `app:buildEnvironment`. 
 
 The [build fails](https://scans.gradle.com/s/ccm2622rhlyvk/failure#1) because a plugin cannot be found that passes the constraints.
 https://scans.gradle.com/s/ccm2622rhlyvk/build-dependencies?focusedDependency=WzEsMCwxLFsxLDAsWzFdXV0&focusedDependencyView=dependencies_or_failure&toggled=W1sxXSxbMSwwXV0
